@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}All Tasks{% endblock %}
+
+{% block body %}
+    <h1 class="tasks-site-h1">All your Tasks</h1>
+    <div class="all-todos">
+        {% for todo in todos %}
+            <span class="todo-item">
+                <h2 class="title-of-todo">{{ todo.title }}</h2>
+                <p class="description-of-todo">{{ todo.content }}</p>
+            </span>
+        {% endfor %}
+    </div>
+{% endblock %}

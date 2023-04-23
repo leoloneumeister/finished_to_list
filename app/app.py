@@ -1,5 +1,6 @@
 from flask import Flask
 from app.extensions.database import db, migrate
+from . import simple_pages, todo
 
 
 def create_app():
@@ -18,4 +19,5 @@ def register_extensions(app: Flask):
 
 # Blueprints
 def register_blueprints(app: Flask):
-    pass
+    app.register_blueprint(simple_pages.routes.blueprint)
+    app.register_blueprint(todo.routes.blueprint)
