@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+.form-submit-button{
+    padding: 0.3rem;
+    margin: 0;
+}
+
 ul {
     margin: 0;
     padding: 0.5rem;
@@ -24,10 +29,27 @@ ul {
     padding-left: 2rem;
 }
 
+.prev-next-nav{
+    margin: 0;
+    padding: 2rem;
+    padding-left: 0rem;
+    font-size: 2rem;
+}
+
 .all-todos{
     padding-left: 2rem;
 }
 
-.title-of-todo{}
+.delete-edit-buttons{
+    display: flex;
+}
 
-.description-of-todo{}
+.title-of-todo{
+    margin: 0;
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
+}
+
+.description-of-todo{
+    margin: 0;
+}

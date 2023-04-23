@@ -5,11 +5,36 @@
 {% block body %}
     <h1 class="tasks-site-h1">All your Tasks</h1>
     <div class="all-todos">
-        {% for todo in todos %}
+        {% for todo in todos.items %}
             <span class="todo-item">
                 <h2 class="title-of-todo">{{ todo.title }}</h2>
                 <p class="description-of-todo">{{ todo.content }}</p>
+                <span class="delete-edit-buttons">
+                    <form action="{{ url_for('todo.delete_todo') }}" method="post">
+                        <input type="hidden" name="id" value={{ todo.id }}>
+                        <button class="form-submit-button" type="submit">Delete</button>
+                    </form>
+                    <form action="{{ url_for('todo.edit_todo_form', id=todo.id) }}" method="get">
+                        <button class="form-submit-button" type="submit">Edit</button>
+                    </form>
+                </span>
             </span>
+            <p>-------------------------------</p>
         {% endfor %}
+        <nav class="prev-next-nav">
+            {% if todos.prev_num %}
+                <a href="/todo-list?page={{ todos.prev_num }}">Previous Page</a>
+            {% else %}
+                <span>Previous Page</span>
+            {% endif %}
+
+            <span> - </span>
+
+            {% if todos.next_num %}
+                <a href="/todo-list?page={{ todos.next_num }}">Next Page</a>
+            {% else %}
+                <span>Next Page</span>
+            {% endif %}
+        </nav>
     </div>
 {% endblock %}

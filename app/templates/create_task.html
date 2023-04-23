@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <form method="post" action="{{ url_for('todo.create_todo') }}">
+        <input type="text" name="title" placeholder="Title of the Task">
+        <input type="text" name="content" placeholder="Describe your task">
+        <button class="form-submit-button" type="submit">Create Task</button>
+    </form>
+{% endblock %}

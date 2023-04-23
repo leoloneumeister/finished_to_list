@@ -4,3 +4,4 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SQLALCHEMY_DATABASE_URI = environ.get('DATABASE_URL')
+TODOS_PER_PAGE = 4
