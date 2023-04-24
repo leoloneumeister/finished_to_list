@@ -46,8 +46,14 @@ FLASK_DEBUG=True' > .env
 
 7. Run locally
 
+Macos/linux
 ```bash
 gunicorn run:app
+```
+
+windows
+```bash
+python run.py
 ```
 
 8. Open on port:
