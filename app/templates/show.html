@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class="todo-title-show">{{ todo.title }}</h1>
+<p>{{ todo.content }}
+<button class="mark-button">Mark as done or undone</button>
+<script>
+    const button = document.querySelector('.mark-button')
+    const title = document.querySelector('.todo-title-show')
+    button.addEventListener('click', () => {
+        console.log("test")
+        console.log(title)
+        if (title.style.backgroundColor == "lightgreen") {
+            title.style.backgroundColor = "white";
+        } else {
+            title.style.backgroundColor = "lightgreen";
+        }
+    });
+</script>
+{% endblock %}

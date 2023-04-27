@@ -17,6 +17,9 @@ ul {
 }
 
 .navbar{
+    display: flex;
+    flex-direction: row;
+    font-size: 3rem;
     margin: 0;
     background: lightblue;
 }
@@ -52,4 +55,26 @@ ul {
 
 .description-of-todo{
     margin: 0;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 600px){
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        margin: 0;
+        background: lightblue;
+    }
+
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

@@ -52,3 +52,9 @@ def edit_todo():
     todo.save()
 
     return redirect(url_for('todo.show_todos'))
+
+
+@blueprint.route('/showtodo/<id>')
+def show_todo(id):
+    todo = Todo.query.filter_by(id=id).first()
+    return render_template('show.html', todo=todo)

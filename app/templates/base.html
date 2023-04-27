@@ -14,11 +14,13 @@
 
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="{{ url_for('simple_pages.index') }}">Home</a></li>
-            <li><a href="{{ url_for('todo.show_todos') }}">Show all Todos</a></li>
-            <li><a href="{{ url_for('todo.create_todo_form') }}">Create new Todo</a></li>
-        </ul>
+        <div class="flexbox">
+            <ul>
+                <li><a href="{{ url_for('simple_pages.index') }}">Home</a></li>
+                <li><a href="{{ url_for('todo.show_todos') }}">Show all Todos</a></li>
+                <li><a href="{{ url_for('todo.create_todo_form') }}">Create new Todo</a></li>
+            </ul>
+        </div>
     </nav>
     {% block body %}{% endblock %}
 </body>
