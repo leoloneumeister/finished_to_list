@@ -13,6 +13,7 @@ ul {
     padding-left: 2rem;
     list-style: none;
     display: flex;
+    flex-direction: row;
     gap: 0.5rem;
 }
 
@@ -25,10 +26,6 @@ ul {
 }
 
 .first-site-h1{
-    padding-left: 2rem;
-}
-
-.tasks-site-h1{
     padding-left: 2rem;
 }
 
@@ -57,24 +54,20 @@ ul {
     margin: 0;
 }
 
-.flexbox {
-    display: flex;
-    flex-direction: row;
-}
 
-@media only screen and (max-width: 600px){
-
-    .navbar{
+@media only screen and (max-width: 800px){
+    body {
         display: flex;
         flex-direction: column;
-        font-size: 1.5rem;
+        align-items: center;
+    }
+    ul {
         margin: 0;
-        background: lightblue;
-    }
-
-    .flexbox {
+        padding: 0.5rem;
+        padding-left: 2rem;
+        list-style: none;
         display: flex;
         flex-direction: column;
+        gap: 0.5rem;
     }
-
 }

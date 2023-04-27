@@ -3,8 +3,8 @@
 {% block title %}All Tasks{% endblock %}
 
 {% block body %}
-    <h1 class="tasks-site-h1">All your Tasks</h1>
     <div class="all-todos">
+        <h1 class="tasks-site-h1">All your Tasks</h1>
         {% for todo in todos.items %}
             <span class="todo-item">
                 <a href="{{ url_for('todo.show_todo', id=todo.id) }}"><h2 class="title-of-todo">{{ todo.title }}</h2></a>
